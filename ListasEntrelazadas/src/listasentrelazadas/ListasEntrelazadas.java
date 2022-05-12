@@ -25,7 +25,8 @@ public class ListasEntrelazadas {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                         "1. Agregar un valor al inicio de la lista\n2. Agregar un valor al final de la lista\n"
                                 + "3. Mostrar los valores de la lista\n"
-                                + "4. Salir", "Menu de opciones"));
+                                + "4. Eliminar un valor al inicio de la lista\n"
+                                + "5. Salir", "Menu de opciones"));
                 switch(opcion){
                     case 1:
                         try{
@@ -50,6 +51,10 @@ public class ListasEntrelazadas {
                         listita.mostrarLista();
                         break;
                     case 4:
+                        vl=listita.borrar();
+                        JOptionPane.showInputDialog(null, "El valor eliminado es " + vl,
+                                "Eliminando Nodo del inicio",JOptionPane.INFORMATION_MESSAGE);
+                    case 5:
                         JOptionPane.showInputDialog(null, "Programa finalizado");
                     default:
                         JOptionPane.showInputDialog(null, "Opcion invalida ");
@@ -57,7 +62,7 @@ public class ListasEntrelazadas {
             }catch(Exception e){
                 JOptionPane.showInputDialog(null, "ERROR " + e.getMessage());
             }
-        }while(opcion!=4);
+        }while(opcion!=5);
     }
     
 }

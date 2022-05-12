@@ -49,4 +49,15 @@ public class Listas {
             recorrer = recorrer.siguiente;
         }
     }
+    //Metodo para borrar un dato al inicio de la lista
+    public int borrar(){
+        int Valor = inicio.dato;
+        if (inicio==fin){
+            inicio = null;
+            fin = null;
+        }else{
+            inicio = inicio.siguiente;
+        }
+        return Valor;
+    }
 }
