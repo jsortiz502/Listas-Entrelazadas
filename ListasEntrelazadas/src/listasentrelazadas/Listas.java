@@ -9,7 +9,10 @@ package listasentrelazadas;
  *
  * @author Acer
  */
+import java.util.*;
+
 public class Listas {
+    static double media;
     protected Nodos inicio,fin;//Punteros buscan donde se ubica el iniicio y fin
     public Listas(){
         inicio = null;
@@ -59,5 +62,14 @@ public class Listas {
             inicio = inicio.siguiente;
         }
         return Valor;
+    }
+    public void media(){
+        int numero;
+         numero = inicio.dato;
+        inicio = inicio.siguiente;
+        if (!Vacio()){
+            media = (numero + inicio.dato);    
+        }
+        
     }
 }
