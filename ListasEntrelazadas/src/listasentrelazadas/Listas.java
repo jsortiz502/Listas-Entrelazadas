@@ -13,6 +13,10 @@ import java.util.*;
 
 public class Listas {
     static double media;
+    static double total;
+    static double resta;
+    static double operacion;
+    static double resultado;
     protected Nodos inicio,fin;//Punteros buscan donde se ubica el iniicio y fin
     public Listas(){
         inicio = null;
@@ -63,13 +67,27 @@ public class Listas {
         }
         return Valor;
     }
+    //Metodo para sacar la media de los datos ingresados en la lista
     public void media(){
+        Nodos recorrer= inicio;
         int numero;
-         numero = inicio.dato;
-        inicio = inicio.siguiente;
+         numero = fin.dato;
         if (!Vacio()){
-            media = (numero + inicio.dato);    
-        }
-        
+            media = (recorrer.siguiente.dato +  recorrer);    
+            //total = (media/recorrer.siguiente.dato);
+            System.out.println(media);
+        }      
+    }
+    public void dvs(){
+        Nodos recorrer = inicio.siguiente;
+        //Nodos recorrerD = inicio.siguiente;
+        int numero;
+        numero = inicio.dato;
+        resta = (numero - total);
+        if (!Vacio()){
+            operacion = (recorrer.siguiente.dato - numero);
+            resultado = Math.pow(operacion, 2);
+            System.out.println(resultado);
+        }      
     }
 }

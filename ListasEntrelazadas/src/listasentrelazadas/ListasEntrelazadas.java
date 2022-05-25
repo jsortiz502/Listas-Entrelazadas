@@ -26,7 +26,9 @@ public class ListasEntrelazadas {
                         "1. Agregar un valor al inicio de la lista\n2. Agregar un valor al final de la lista\n"
                                 + "3. Mostrar los valores de la lista\n"
                                 + "4. Eliminar un valor al inicio de la lista\n"
-                                + "5. Salir", "Menu de opciones"));
+                                + "5. Sacar la media de los datos\n"
+                                + "6. Sacar la desviacion estandar\n"
+                                + "7. Salir", "Menu de opciones"));
                 switch(opcion){
                     case 1:
                         try{
@@ -55,6 +57,13 @@ public class ListasEntrelazadas {
                         JOptionPane.showInputDialog(null, "El valor eliminado es " + vl,
                                 "Eliminando Nodo del inicio",JOptionPane.INFORMATION_MESSAGE);
                     case 5:
+                        listita.media();System.out.println("Esta es el promedio de sus datos");
+                        break;
+                    case 6:
+                        listita.dvs();
+                        break;
+                        
+                    case 7:
                         JOptionPane.showInputDialog(null, "Programa finalizado");
                     default:
                         JOptionPane.showInputDialog(null, "Opcion invalida ");
@@ -62,7 +71,7 @@ public class ListasEntrelazadas {
             }catch(Exception e){
                 JOptionPane.showInputDialog(null, "ERROR " + e.getMessage());
             }
-        }while(opcion!=5);
+        }while(opcion!=7);
     }
     
 }
